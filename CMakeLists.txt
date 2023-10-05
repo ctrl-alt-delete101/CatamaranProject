@@ -23,10 +23,10 @@ include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(include/catamaran)
 
 add_executable(laptop
-  src/laptop.cpp include/catamaran/util.hpp src/util.cpp include/catamaran/laptop.hpp)
+  src/laptop.cpp include/catamaran/laptop.hpp)
 target_link_libraries(laptop ${SDL2_LIBRARIES})
 
 add_executable(catamaran
-  src/catamaran.cpp include/catamaran/util.hpp src/util.cpp
+  src/catamaran.cpp
   include/catamaran/thrusters.hpp src/thrusters.cpp)
 target_link_libraries(catamaran pthread)
