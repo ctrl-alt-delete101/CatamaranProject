@@ -44,10 +44,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/gracious/Downloads/team-1
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/gracious/Downloads/team-1/build
+=======
+CMAKE_SOURCE_DIR = /home/arjun/ArjunCode/CatamaranCode
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/arjun/ArjunCode/CatamaranCode/build
+>>>>>>> refs/remotes/origin/main
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -76,14 +83,24 @@ clean: CMakeFiles/laptop.dir/clean
 CMakeFiles/catamaran.dir/all:
 	$(MAKE) -f CMakeFiles/catamaran.dir/build.make CMakeFiles/catamaran.dir/depend
 	$(MAKE) -f CMakeFiles/catamaran.dir/build.make CMakeFiles/catamaran.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gracious/Downloads/team-1/build/CMakeFiles --progress-num=1,2,3 "Built target catamaran"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles --progress-num=1,2,3 "Built target catamaran"
+>>>>>>> refs/remotes/origin/main
 .PHONY : CMakeFiles/catamaran.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/catamaran.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gracious/Downloads/team-1/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/catamaran.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gracious/Downloads/team-1/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/catamaran.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles 0
+>>>>>>> refs/remotes/origin/main
 .PHONY : CMakeFiles/catamaran.dir/rule
 
 # Convenience name for target.
@@ -103,14 +120,24 @@ CMakeFiles/catamaran.dir/clean:
 CMakeFiles/laptop.dir/all:
 	$(MAKE) -f CMakeFiles/laptop.dir/build.make CMakeFiles/laptop.dir/depend
 	$(MAKE) -f CMakeFiles/laptop.dir/build.make CMakeFiles/laptop.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gracious/Downloads/team-1/build/CMakeFiles --progress-num=4,5 "Built target laptop"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles --progress-num=4,5 "Built target laptop"
+>>>>>>> refs/remotes/origin/main
 .PHONY : CMakeFiles/laptop.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/laptop.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gracious/Downloads/team-1/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/laptop.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gracious/Downloads/team-1/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/laptop.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles 0
+>>>>>>> refs/remotes/origin/main
 .PHONY : CMakeFiles/laptop.dir/rule
 
 # Convenience name for target.

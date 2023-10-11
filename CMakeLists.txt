@@ -26,7 +26,6 @@ add_executable(laptop
   src/laptop.cpp include/catamaran/laptop.hpp)
 target_link_libraries(laptop ${SDL2_LIBRARIES})
 
-add_executable(catamaran
-  src/catamaran.cpp
+add_executable(catamaran src/catamaran.cpp
   include/catamaran/thrusters.hpp src/thrusters.cpp)
 target_link_libraries(catamaran pthread)

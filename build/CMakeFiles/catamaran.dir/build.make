@@ -43,10 +43,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/gracious/Downloads/team-1
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/gracious/Downloads/team-1/build
+=======
+CMAKE_SOURCE_DIR = /home/arjun/ArjunCode/CatamaranCode
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/arjun/ArjunCode/CatamaranCode/build
+>>>>>>> refs/remotes/origin/main
 
 # Include any dependencies generated for this target.
 include CMakeFiles/catamaran.dir/depend.make
@@ -59,6 +66,7 @@ include CMakeFiles/catamaran.dir/flags.make
 
 CMakeFiles/catamaran.dir/src/catamaran.cpp.o: CMakeFiles/catamaran.dir/flags.make
 CMakeFiles/catamaran.dir/src/catamaran.cpp.o: ../src/catamaran.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gracious/Downloads/team-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/catamaran.dir/src/catamaran.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/catamaran.dir/src/catamaran.cpp.o -c /home/gracious/Downloads/team-1/src/catamaran.cpp
 
@@ -82,6 +90,31 @@ CMakeFiles/catamaran.dir/src/thrusters.cpp.i: cmake_force
 CMakeFiles/catamaran.dir/src/thrusters.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/catamaran.dir/src/thrusters.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gracious/Downloads/team-1/src/thrusters.cpp -o CMakeFiles/catamaran.dir/src/thrusters.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/catamaran.dir/src/catamaran.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/catamaran.dir/src/catamaran.cpp.o -c /home/arjun/ArjunCode/CatamaranCode/src/catamaran.cpp
+
+CMakeFiles/catamaran.dir/src/catamaran.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/catamaran.dir/src/catamaran.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arjun/ArjunCode/CatamaranCode/src/catamaran.cpp > CMakeFiles/catamaran.dir/src/catamaran.cpp.i
+
+CMakeFiles/catamaran.dir/src/catamaran.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/catamaran.dir/src/catamaran.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arjun/ArjunCode/CatamaranCode/src/catamaran.cpp -o CMakeFiles/catamaran.dir/src/catamaran.cpp.s
+
+CMakeFiles/catamaran.dir/src/thrusters.cpp.o: CMakeFiles/catamaran.dir/flags.make
+CMakeFiles/catamaran.dir/src/thrusters.cpp.o: ../src/thrusters.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/catamaran.dir/src/thrusters.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/catamaran.dir/src/thrusters.cpp.o -c /home/arjun/ArjunCode/CatamaranCode/src/thrusters.cpp
+
+CMakeFiles/catamaran.dir/src/thrusters.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/catamaran.dir/src/thrusters.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arjun/ArjunCode/CatamaranCode/src/thrusters.cpp > CMakeFiles/catamaran.dir/src/thrusters.cpp.i
+
+CMakeFiles/catamaran.dir/src/thrusters.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/catamaran.dir/src/thrusters.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arjun/ArjunCode/CatamaranCode/src/thrusters.cpp -o CMakeFiles/catamaran.dir/src/thrusters.cpp.s
+>>>>>>> refs/remotes/origin/main
 
 # Object files for target catamaran
 catamaran_OBJECTS = \
@@ -95,7 +128,11 @@ catamaran: CMakeFiles/catamaran.dir/src/catamaran.cpp.o
 catamaran: CMakeFiles/catamaran.dir/src/thrusters.cpp.o
 catamaran: CMakeFiles/catamaran.dir/build.make
 catamaran: CMakeFiles/catamaran.dir/link.txt
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gracious/Downloads/team-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable catamaran"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable catamaran"
+>>>>>>> refs/remotes/origin/main
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/catamaran.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +145,10 @@ CMakeFiles/catamaran.dir/clean:
 .PHONY : CMakeFiles/catamaran.dir/clean
 
 CMakeFiles/catamaran.dir/depend:
+<<<<<<< HEAD
 	cd /home/gracious/Downloads/team-1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gracious/Downloads/team-1 /home/gracious/Downloads/team-1 /home/gracious/Downloads/team-1/build /home/gracious/Downloads/team-1/build /home/gracious/Downloads/team-1/build/CMakeFiles/catamaran.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/arjun/ArjunCode/CatamaranCode/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/arjun/ArjunCode/CatamaranCode /home/arjun/ArjunCode/CatamaranCode /home/arjun/ArjunCode/CatamaranCode/build /home/arjun/ArjunCode/CatamaranCode/build /home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles/catamaran.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> refs/remotes/origin/main
 .PHONY : CMakeFiles/catamaran.dir/depend
 

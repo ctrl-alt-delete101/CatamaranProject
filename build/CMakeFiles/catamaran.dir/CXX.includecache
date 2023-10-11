@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/gracious/Downloads/team-1/src/catamaran.cpp
 
 /home/gracious/Downloads/team-1/src/thrusters.cpp
@@ -13,4 +14,9 @@ iostream
 -
 sstream
 -
+=======
+/home/arjun/ArjunCode/CatamaranCode/src/catamaran.cpp
+
+/home/arjun/ArjunCode/CatamaranCode/src/thrusters.cpp
+>>>>>>> refs/remotes/origin/main
 

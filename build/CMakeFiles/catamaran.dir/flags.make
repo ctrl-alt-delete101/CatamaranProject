@@ -6,5 +6,9 @@ CXX_FLAGS =   -pthread -Wall -Wextra -Wpedantic -std=gnu++17
 
 CXX_DEFINES = 
 
+<<<<<<< HEAD
 CXX_INCLUDES = -I/usr/include/SDL2 -I/home/gracious/Downloads/team-1/include/catamaran 
+=======
+CXX_INCLUDES = -I/usr/include/SDL2 -I/home/arjun/ArjunCode/CatamaranCode/include/catamaran 
+>>>>>>> refs/remotes/origin/main
 

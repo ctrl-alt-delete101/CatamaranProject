@@ -6,5 +6,9 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/gracious/Downloads/team-1/src/laptop.cpp
+=======
+/home/arjun/ArjunCode/CatamaranCode/src/laptop.cpp
+>>>>>>> refs/remotes/origin/main
 

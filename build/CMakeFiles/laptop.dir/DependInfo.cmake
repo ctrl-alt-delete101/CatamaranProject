@@ -4,7 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+<<<<<<< HEAD
   "/home/gracious/Downloads/team-1/src/laptop.cpp" "/home/gracious/Downloads/team-1/build/CMakeFiles/laptop.dir/src/laptop.cpp.o"
+=======
+  "/home/arjun/ArjunCode/CatamaranCode/src/laptop.cpp" "/home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles/laptop.dir/src/laptop.cpp.o"
+>>>>>>> refs/remotes/origin/main
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

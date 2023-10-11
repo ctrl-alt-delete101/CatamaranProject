@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/gracious/Downloads/team-1
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/gracious/Downloads/team-1/build
+=======
+CMAKE_SOURCE_DIR = /home/arjun/ArjunCode/CatamaranCode
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/arjun/ArjunCode/CatamaranCode/build
+>>>>>>> refs/remotes/origin/main
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +87,15 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gracious/Downloads/team-1/build/CMakeFiles /home/gracious/Downloads/team-1/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gracious/Downloads/team-1/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles /home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles 0
+>>>>>>> refs/remotes/origin/main
 .PHONY : all
 
 # The main clean target

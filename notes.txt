@@ -1,0 +1,15 @@
+Nodes --> processes
+We have two nodes 
+- laptop node (or commander, tell the catamaran what to do while in remote control)
+    - Joystick Module: reads input and then sends information to the Pi
+    - Telemetry (getting data back from the PI)
+    - GUI (graphical user interface)
+- Raspberry Pi node (catamaran)
+    - Remote Control (command parser)
+    - Controlling Thrusters (PWM, PWM rate limiter)
+        - Command is called *request* Thrusters because it doesn't immediately set it.
+    - Advanced:
+        - GPS
+        - Computer vision
+        - Follow Qubo
+

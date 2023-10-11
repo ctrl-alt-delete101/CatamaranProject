@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/gracious/Downloads/team-1
+=======
+# Install script for directory: /home/arjun/ArjunCode/CatamaranCode
+>>>>>>> refs/remotes/origin/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +49,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/gracious/Downloads/team-1/build/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/arjun/ArjunCode/CatamaranCode/build/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> refs/remotes/origin/main
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

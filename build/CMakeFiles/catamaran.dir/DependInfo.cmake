@@ -4,8 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+<<<<<<< HEAD
   "/home/gracious/Downloads/team-1/src/catamaran.cpp" "/home/gracious/Downloads/team-1/build/CMakeFiles/catamaran.dir/src/catamaran.cpp.o"
   "/home/gracious/Downloads/team-1/src/thrusters.cpp" "/home/gracious/Downloads/team-1/build/CMakeFiles/catamaran.dir/src/thrusters.cpp.o"
+=======
+  "/home/arjun/ArjunCode/CatamaranCode/src/catamaran.cpp" "/home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles/catamaran.dir/src/catamaran.cpp.o"
+  "/home/arjun/ArjunCode/CatamaranCode/src/thrusters.cpp" "/home/arjun/ArjunCode/CatamaranCode/build/CMakeFiles/catamaran.dir/src/thrusters.cpp.o"
+>>>>>>> refs/remotes/origin/main
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
