@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/arjun/ArjunCode/CatamaranCode/src/catamaran.cpp
+
+/home/arjun/ArjunCode/CatamaranCode/src/thrusters.cpp
+

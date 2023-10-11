@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/catamaran.dir/src/catamaran.cpp.o CMakeFiles/catamaran.dir/src/thrusters.cpp.o  -o catamaran  -lpthread 
