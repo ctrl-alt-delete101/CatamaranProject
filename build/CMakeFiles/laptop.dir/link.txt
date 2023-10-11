@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/laptop.dir/src/laptop.cpp.o  -o laptop  -lSDL2 
