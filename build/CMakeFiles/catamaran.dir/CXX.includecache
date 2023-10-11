@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gracious/Downloads/team-1/src/catamaran.cpp
+
+/home/gracious/Downloads/team-1/src/thrusters.cpp
+iostream
+-
+sstream
+-
+
