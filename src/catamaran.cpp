@@ -10,18 +10,10 @@ int main(){
 
     std::string line; //String because strings are not part of c++ its part of standard library
     // will keep receiving messages until error or EOF
-
-
-
     while(std::getline(std::cin, line) ){//Read a line from stream into a string.
 
         // cin takes input from standard input device (laptop) (this will be our input stream)
         // we store the input into the line variable...
-        
-
-
-        cerr << "heres a line: " << line << '\n';
-
 
         std::istringstream iss(line); // creates iss object treating the line string as a stream..
 
