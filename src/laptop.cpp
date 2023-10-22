@@ -2,9 +2,14 @@
 #include <thread>
 #include <chrono>
 #include <SDL.h>
+#define MAX_INPUT 32767
+#define MIN_INPUT -32768
+
 
 using std::cout;
 using std::cerr;
+
+double scalarMultiplier = 1.0 / ((32767.0 + 32768.0) / (200.0));
 
 struct JoyState{
     bool running;
@@ -80,6 +85,14 @@ void handleEvents(JoyState& state)
     }
 }
 
+double linear_map(double state, double upper_bound, double lower_bound){
+    double output = lower_bound + ( (upper_bound - lower_bound) / (MAX_INPUT - (MIN_INPUT))) * (state - (MIN_INPUT));
+    if(output <= 0.002 && output >= -0.002){
+        return 0.0;
+    }
+    return output;
+}
+
 int main()
 {
     if (not init()) {
@@ -99,11 +112,9 @@ int main()
 
     while (state.running) {
         handleEvents(state);
-
-        cout << "leftX: " << state.joy.leftX
-             << ", leftY: " << state.joy.leftY
-             << " rightX: " << state.joy.rightX
-             << ", rightY: " << state.joy.rightY
+        cout
+             << "left axis: " << linear_map(state.joy.leftY, -100.0, 100.0)
+             << " right axis: " << linear_map(state.joy.rightX, -100.0, 100.0) * -1.0
              << '\n';             
 
         std::this_thread::sleep_for(std::chrono::milliseconds(16));
