@@ -113,9 +113,9 @@ int main()
     while (state.running) {
         handleEvents(state);
         cout
-             << "left axis: " << linear_map(state.joy.leftY, -100.0, 100.0)
-             << " right axis: " << linear_map(state.joy.rightX, -100.0, 100.0) * -1.0
-             << '\n';             
+             << "request-thrust " << linear_map(state.joy.leftY, -100.0, 100.0)
+             << " " << linear_map(state.joy.rightY, -100.0, 100.0)
+             << std::endl;             
 
         std::this_thread::sleep_for(std::chrono::milliseconds(16));
     }
