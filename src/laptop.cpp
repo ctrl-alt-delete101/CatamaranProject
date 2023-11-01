@@ -2,6 +2,8 @@
 #include <thread>
 #include <chrono>
 #include <SDL.h>
+#include "utility.hpp"
+
 #define MAX_INPUT 32767
 #define MIN_INPUT -32768
 
@@ -85,13 +87,13 @@ void handleEvents(JoyState& state)
     }
 }
 
-double linear_map(double state, double upper_bound, double lower_bound){
-    double output = lower_bound + ( (upper_bound - lower_bound) / (MAX_INPUT - (MIN_INPUT))) * (state - (MIN_INPUT));
-    if(output <= 0.002 && output >= -0.002){
-        return 0.0;
-    }
-    return output;
-}
+// double linear_map(double state, double upper_bound, double lower_bound){
+//     double output = lower_bound + ( (upper_bound - lower_bound) / (MAX_INPUT - (MIN_INPUT))) * (state - (MIN_INPUT));
+//     if(output <= 0.002 && output >= -0.002){
+//         return 0.0;
+//     }
+//     return output;
+// }
 
 int main()
 {
@@ -113,8 +115,8 @@ int main()
     while (state.running) {
         handleEvents(state);
         cout
-             << "request-thrust " << linear_map(state.joy.leftY, -100.0, 100.0)
-             << " " << linear_map(state.joy.rightY, -100.0, 100.0)
+             << "request-thrust " << linear_map(state.joy.leftY, MAX_INPUT, MIN_INPUT, -100.0, 100.0)
+             << " " << linear_map(state.joy.rightY,MAX_INPUT, MIN_INPUT, -100.0, 100.0)
              << std::endl;             
 
         std::this_thread::sleep_for(std::chrono::milliseconds(16));
