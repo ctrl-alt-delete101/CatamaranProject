@@ -4,6 +4,7 @@
 using std::cerr; // unbuffered so it sends error immediately to screen instead of it being delayed
 // cerr --> standard error stream
 
+
 int main(){
     double leftThrust, rightThrust;
     std::string command;

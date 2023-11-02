@@ -18,6 +18,9 @@ private:
     // Returned by `pigpio_start()`.
     PigpiodHandle pi;
 
+    double leftDesired = 0;
+    double rightDesired = 0;
+
     /**
      * constexpr indicates that the value, or return value,
      * is constant and, where possible, is computed at 
