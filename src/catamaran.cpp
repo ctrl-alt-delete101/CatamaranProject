@@ -1,5 +1,7 @@
 #include <iostream>
 #include <sstream>
+#include <pigpiod_if2.h>
+#include "thrusters.hpp"
 
 using std::cerr; // unbuffered so it sends error immediately to screen instead of it being delayed
 // cerr --> standard error stream
@@ -8,6 +10,8 @@ using std::cerr; // unbuffered so it sends error immediately to screen instead o
 int main(){
     double leftThrust, rightThrust;
     std::string command;
+    Thrusters thrusters (pigpio_start(NULL, NULL));
+    
 
     std::string line; //String because strings are not part of c++ its part of standard library
     // will keep receiving messages until error or EOF
@@ -25,6 +29,8 @@ int main(){
             cerr << "error: Failed to parse thrust values.\n";
             } else {
                 cerr << "received left: "   << leftThrust << ", right: " << rightThrust << '\n';
+                thrusters.request_thrust(leftThrust, rightThrust);
+                thrusters.step();
             }
         }
     }
