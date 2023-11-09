@@ -1,4 +1,4 @@
-#if !defined(THRUSTERS_HPP)
+#ifndef THRUSTERS_HPP
 #define THRUSTERS_HPP
 
 #include <chrono>
@@ -20,6 +20,7 @@ private:
 
     double leftDesired = 0;
     double rightDesired = 0;
+    
 
     /**
      * constexpr indicates that the value, or return value,

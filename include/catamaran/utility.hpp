@@ -10,10 +10,15 @@ double linear_map(double state, double input_upper_bound, double input_lower_bou
     return output;
 }
 
-double clamp(double state, double a, double b){
-    return state;
-    //....
+double clamp(double state, double lowerBound, double upperBound){
+    if(state >= lowerBound && state <= upperBound){
+        return state;
+    } else if(state < lowerBound){
+        return lowerBound;
+    } else{
+        return upperBound;
+    }
+    
 }
-
 
 #endif
