@@ -13,7 +13,7 @@ Thrusters::Thrusters(PigpiodHandle pi)
     // (*this).pi = pi;
     // https://pi4j.com/1.2/pins/model-zerow-rev1.html
     
-    pigpio_start("no idea", "no idea");
+    
     set_mode(this->pi, 26,1);
     set_mode(this->pi, 1,1);
 
