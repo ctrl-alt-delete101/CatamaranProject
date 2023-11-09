@@ -11,7 +11,6 @@
 using std::cout;
 using std::cerr;
 
-double scalarMultiplier = 1.0 / ((32767.0 + 32768.0) / (200.0));
 
 struct JoyState{
     bool running;

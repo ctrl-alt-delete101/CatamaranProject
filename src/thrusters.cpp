@@ -13,13 +13,12 @@ Thrusters::Thrusters(PigpiodHandle pi)
     // (*this).pi = pi;
     // https://pi4j.com/1.2/pins/model-zerow-rev1.html
     
-    
-    set_mode(this->pi, 26,1);
-    set_mode(this->pi, 1,1);
-
-    
+    pigpio_start(NULL, NULL);
+    set_mode(this->pi, LEFT_PORT,PI_OUTPUT);
+    set_mode(this->pi, RIGHT_PORT,PI_OUTPUT);
+   
 }
- 
+    
 void Thrusters::step()
 {
     
@@ -30,8 +29,8 @@ void Thrusters::step()
     
     if(duration >= (std::chrono::microseconds) PWM_WAIT){
         
-        set_servo_pulsewidth(this->pi,26,clamp(leftDesired,-5,5));
-        set_servo_pulsewidth(this->pi,1,clamp(rightDesired,-5,5));
+        set_servo_pulsewidth(this->pi,LEFT_PORT,clamp(leftDesired,-5,5));
+        set_servo_pulsewidth(this->pi,RIGHT_PORT,clamp(rightDesired,-5,5));
         
     }
 

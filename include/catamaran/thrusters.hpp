@@ -1,6 +1,9 @@
 #ifndef THRUSTERS_HPP
 #define THRUSTERS_HPP
 
+#define LEFT_PORT 26
+#define RIGHT_PORT 1
+
 #include <chrono>
 #include <cinttypes>
 
