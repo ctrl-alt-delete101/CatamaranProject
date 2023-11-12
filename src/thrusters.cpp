@@ -12,11 +12,11 @@ Thrusters::Thrusters(PigpiodHandle pi)
     this->pi = pi;
     // (*this).pi = pi;
     // https://pi4j.com/1.2/pins/model-zerow-rev1.html
-    
     pigpio_start(NULL, NULL);
     set_mode(this->pi, LEFT_PORT,PI_OUTPUT);
+    set_servo_pulsewidth(this->pi,LEFT_PORT,1500);
     set_mode(this->pi, RIGHT_PORT,PI_OUTPUT);
-   
+    set_servo_pulsewidth(this->pi,RIGHT_PORT,1500);
 }
     
 void Thrusters::step()
@@ -33,7 +33,6 @@ void Thrusters::step()
         set_servo_pulsewidth(this->pi,RIGHT_PORT,clamp(rightDesired,-5,5));
         
     }
-
 }
 
 void Thrusters::request_thrust(double left, double right)
