@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+address=${1:?Must provide the address of the Pi}
+
+rsync -v --exclude '/build' --exclude '/.git' --exclude '/venv' --archive --recursive --partial --progress . "pi@${address}:code/"
+
