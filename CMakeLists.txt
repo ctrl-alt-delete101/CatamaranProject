@@ -17,10 +17,11 @@ endif()
 
 # Libraries
 
-find_package(SDL2)
-include_directories(${SDL2_INCLUDE_DIRS})
+#find_package(SDL2)
+#include_directories(${SDL2_INCLUDE_DIRS})
 
 include_directories(include/catamaran)
+include_directories(vendor/pigpio)
 
 add_executable(laptop
   src/laptop.cpp include/catamaran/laptop.hpp)
@@ -28,4 +29,4 @@ target_link_libraries(laptop ${SDL2_LIBRARIES})
 
 add_executable(catamaran src/catamaran.cpp
   include/catamaran/thrusters.hpp src/thrusters.cpp)
-target_link_libraries(catamaran pthread)
+target_link_libraries(catamaran pthread pigpiod_if2)

@@ -1,8 +1,8 @@
 #ifndef THRUSTERS_HPP
 #define THRUSTERS_HPP
 
-#define LEFT_PORT 26
-#define RIGHT_PORT 1
+#define LEFT_PORT 12
+#define RIGHT_PORT 13
 
 #include <chrono>
 #include <cinttypes>
@@ -23,6 +23,7 @@ private:
 
     double leftDesired = 0;
     double rightDesired = 0;
+    std::chrono::_V2::system_clock::time_point beg;
     
 
     /**

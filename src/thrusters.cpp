@@ -1,12 +1,15 @@
 #include <chrono>
 #include <cinttypes>
+#include <iostream>
+#include <sstream>
 #include <pigpiod_if2.h>
 #include "thrusters.hpp"
 #include "utility.hpp"
 
 using namespace std::chrono;
+using namespace std;
 
-std::chrono::_V2::system_clock::time_point beg;
+
 Thrusters::Thrusters(PigpiodHandle pi)
 {
     this->pi = pi;
@@ -16,7 +19,7 @@ Thrusters::Thrusters(PigpiodHandle pi)
     pigpio_start(NULL, NULL);
     set_mode(this->pi, LEFT_PORT,PI_OUTPUT);
     set_mode(this->pi, RIGHT_PORT,PI_OUTPUT);
-   
+    beg = high_resolution_clock::now();
 }
     
 void Thrusters::step()
@@ -28,17 +31,22 @@ void Thrusters::step()
 
     
     if(duration >= (std::chrono::microseconds) PWM_WAIT){
-        
-        set_servo_pulsewidth(this->pi,LEFT_PORT,clamp(leftDesired,-5,5));
-        set_servo_pulsewidth(this->pi,RIGHT_PORT,clamp(rightDesired,-5,5));
-        
+        double left = clamp(leftDesired,PWM_MIN,PWM_MAX);
+        double right = clamp(rightDesired,PWM_MIN,PWM_MAX);
+        set_servo_pulsewidth(this->pi, LEFT_PORT, left);
+        set_servo_pulsewidth(this->pi, RIGHT_PORT, right);
+        cerr << "setting left: "   << left<< ", right: " << right << '\n';
+        beg = high_resolution_clock::now();
     }
 
 }
 
 void Thrusters::request_thrust(double left, double right)
 {
-    leftDesired = (this->pi, 26, linear_map(left, -100, 100, PWM_MIN, PWM_MAX));
-    rightDesired = (this->pi, 26, linear_map(right, -100, 100, PWM_MIN, PWM_MAX));
-    beg = high_resolution_clock::now();
+    // leftDesired = (this->pi, 26, linear_map(left, -100, 100, PWM_MIN, PWM_MAX));
+    // rightDesired = (this->pi, 26, linear_map(right, -100, 100, PWM_MIN, PWM_MAX));
+
+    leftDesired = linear_map(left, -100, 100, PWM_MIN, PWM_MAX);
+    rightDesired = linear_map(right, -100, 100, PWM_MIN, PWM_MAX);
+    
 }
