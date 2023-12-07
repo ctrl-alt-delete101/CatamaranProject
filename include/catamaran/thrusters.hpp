@@ -21,9 +21,12 @@ private:
     // Returned by `pigpio_start()`.
     PigpiodHandle pi;
 
+    double leftCurrent  = 0;
+    double rightCurrent = 0;
     double leftDesired = 0;
     double rightDesired = 0;
     std::chrono::_V2::system_clock::time_point beg;
+    
     
 
     /**
